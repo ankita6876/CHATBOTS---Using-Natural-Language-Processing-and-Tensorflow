@@ -1,0 +1,190 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hello",
+        "Hey",
+        "Hey there",
+        "Hi there",
+        "Good morning",
+        "Good evening",
+        "Is anyone there?",
+        "What's up?",
+        "How are you?",
+        "Yo",
+        "Greetings",
+        "Nice to meet you",
+        "Anybody here?",
+        "Hello there"
+      ],
+      "responses": [
+        "Hello, thanks for visiting",
+        "Hi there, how can I help?",
+        "Good to see you again",
+        "Welcome! How can I assist you?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "Goodbye",
+        "See you",
+        "See you later",
+        "Talk to you later",
+        "Catch you later",
+        "I'm leaving",
+        "Have to go",
+        "Quit",
+        "Exit"
+      ],
+      "responses": [
+        "See you later, thanks for visiting",
+        "Have a nice day",
+        "Bye! Come back again soon.",
+        "Take care!"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thanks",
+        "Thank you",
+        "Thanks a lot",
+        "That's helpful",
+        "Appreciate it",
+        "Thank you so much",
+        "Cool thanks",
+        "Great thanks"
+      ],
+      "responses": [
+        "Happy to help!",
+        "Any time!",
+        "My pleasure",
+        "You're welcome!"
+      ]
+    },
+    {
+      "tag": "name",
+      "patterns": [
+        "What is your name?",
+        "What's your name?",
+        "Who are you?",
+        "Tell me your name",
+        "Do you have a name?",
+        "Your name?",
+        "What should I call you?"
+      ],
+      "responses": [
+        "I'm your friendly rental assistant bot.",
+        "You can call me MopedBot!",
+        "I'm the virtual assistant for this rental service."
+      ]
+    },
+    {
+      "tag": "hours",
+      "patterns": [
+        "What hours are you open?",
+        "What are your hours?",
+        "When are you open?",
+        "Opening hours?",
+        "Closing time?",
+        "What time do you close?",
+        "What time do you open?",
+        "Are you open in the morning?",
+        "Are you open at night?"
+      ],
+      "responses": [
+        "We're open every day from 9am to 9pm.",
+        "Our hours are 9am-9pm every day.",
+        "We operate daily between 9am and 9pm."
+      ]
+    },
+    {
+      "tag": "mopeds",
+      "patterns": [
+        "Which mopeds do you have?",
+        "What kinds of mopeds are there?",
+        "What do you rent?",
+        "What brands do you have?",
+        "Do you have Yamaha?",
+        "Do you rent Vespa?",
+        "What models are available?",
+        "Available mopeds?"
+      ],
+      "responses": [
+        "We rent Yamaha, Piaggio and Vespa mopeds.",
+        "We have Piaggio, Vespa and Yamaha mopeds available.",
+        "Our fleet includes Yamaha, Vespa and Piaggio."
+      ]
+    },
+    {
+      "tag": "payments",
+      "patterns": [
+        "Do you take credit cards?",
+        "Do you accept Mastercard?",
+        "Are you cash only?",
+        "Can I pay by card?",
+        "Do you accept Visa?",
+        "What payment methods do you accept?",
+        "Is cash accepted?",
+        "Do you take AMEX?"
+      ],
+      "responses": [
+        "We accept VISA, Mastercard and AMEX.",
+        "We accept most major credit cards.",
+        "Cash and major credit cards are accepted."
+      ]
+    },
+    {
+      "tag": "rental",
+      "patterns": [
+        "Can I rent a moped?",
+        "I'd like to rent a moped",
+        "How does renting work?",
+        "How can I rent?",
+        "I want to book a moped",
+        "How do I reserve?",
+        "Can we rent today?",
+        "Rental process?"
+      ],
+      "responses": [
+        "Are you looking to rent today or later this week?",
+        "Sure! Are you planning to rent today or another day?"
+      ],
+      "context_set": "rentalday"
+    },
+    {
+      "tag": "today",
+      "patterns": [
+        "today",
+        "right now",
+        "this afternoon",
+        "this morning",
+        "now"
+      ],
+      "responses": [
+        "For rentals today please call 1-800-MYMOPED.",
+        "Same-day rentals require calling 1-800-MYMOPED."
+      ],
+      "context_filter": "rentalday"
+    },
+    {
+      "tag": "fallback",
+      "patterns": [
+        "I don't understand",
+        "What?",
+        "Huh?",
+        "Random text",
+        "asdfghjkl"
+      ],
+      "responses": [
+        "I'm not sure I understand. Could you rephrase that?",
+        "Sorry, I didn't get that.",
+        "Can you clarify what you mean?"
+      ]
+    }
+  ]
+}
