@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Chatbot</title>
+</head>
+<body>
+    <h1>AI Chatbot</h1>
+    
+    <div id="chatbox"></div>
+    
+    <input type="text" id="userInput" placeholder="Type a message...">
+    <button onclick="sendMessage()">Send</button>
+
+    <script>
+        function sendMessage() {
+            var userText = document.getElementById("userInput").value;
+            
+            fetch("/get", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                body: "message=" + userText
+            })
+            .then(response => response.json())
+            .then(data => {
+                var chatbox = document.getElementById("chatbox");
+                chatbox.innerHTML += "<p><b>You:</b> " + userText + "</p>";
+                chatbox.innerHTML += "<p><b>Bot:</b> " + data.response + "</p>";
+            });
+
+            document.getElementById("userInput").value = "";
+        }
+    </script>
+</body>
+</html>
